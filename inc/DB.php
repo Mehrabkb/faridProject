@@ -127,7 +127,7 @@ class DB
             $sql .= " ".implode(' ',$this->joins);
 
         if($this->where)
-            $sql .= " WHERE ".implode(' ',$this->where);
+            $sql .= " WHERE ".implode(' AND ',$this->where);
 
         if($this->order)
             $sql .= " ORDER BY ".implode(',',$this->order);
