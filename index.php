@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+require 'inc/Auth.php';
+
+if (!Auth::check()) {
+    header('Location: pages/login.php');
+    exit;
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
